@@ -32,9 +32,9 @@ class Array
       unless options[:header] == false
         csv << columns.collect do |column|
           if column.is_a?(Symbol)
-            column
+            self.first.class.human_attribute_name(column.to_s)
           else
-            "#{column.keys.first}_#{column[column.keys.first]}"
+            self.first.class.human_attribute_name("#{column.keys.first}_#{column[column.keys.first]}")
           end
         end
       end 
