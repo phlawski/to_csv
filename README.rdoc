@@ -2,6 +2,9 @@
 
 This simple plugin gives you the ability to call to_csv to a collection of activerecords. The builder options are the same as to_json / to_xml, except for the :include.
 
+== Fork
+
+This fork just provides ability to use I18n translated column headers. It simply takes translations from localized yaml templates for ActiveRecord models. Additionaly it is possible to add translations for extra columns added by plugin's <tt>:methods</tt> option - i.e. by using <tt>:methods => [{:user => :name}])</tt> plugin produces <tt>user_name</tt> column header, so adding <tt>user_name: Here your translation</tt> in localized yaml file for correct model will do the trick.
 
 == Usage
 
